@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Alert Hub</h1>
+        <p>Weather, alerts, AMBER alerts, emergency protocols, and local crime stats.</p>
+    </header>
+
+    <main>
+        <section id="location">
+            <button id="locateBtn">Use My Location</button>
+            <div class="or-divider">OR</div>
+            <div class="zipcode-input">
+                <input type="text" id="zipcodeInput" placeholder="Enter ZIP code" maxlength="5" />
+                <button id="zipcodeBtn">Get Data</button>
+            </div>
+            <div id="coords"></div>
+        </section>
+
+        <section id="weather" class="card">
+            <h2>Weather</h2>
+            <pre id="weatherData">—</pre>
+        </section>
+
+        <section id="alerts" class="card">
+            <h2>Active Alerts</h2>
+            <ul id="alertsList"></ul>
+        </section>
+
+        <section id="amber" class="card">
+            <h2>AMBER Alerts (Nationwide)</h2>
+            <ul id="amberList"></ul>
+        </section>
+
+        <section id="protocols" class="card">
+            <h2>Emergency Protocols</h2>
+            <div id="protocolsList"></div>
+        </section>
+
+        <section id="crime" class="card">
+            <h2>Crime Statistics</h2>
+            <pre id="crimeData">—</pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data sources: Open-Meteo, NWS, NCMEC, FBI (if configured)</p>
+    </footer>
+
+    <script src="app.js?v=2"></script>
+</body>
+
+</html>
